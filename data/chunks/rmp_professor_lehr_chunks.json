@@ -1,0 +1,47 @@
+[
+  {
+    "chunk_id": "rmp_professor_lehr_review_0",
+    "source": "rmp_professor_lehr",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Ted Lehr",
+    "text": "PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University\n\nREVIEW: PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University",
+    "token_count": 21
+  },
+  {
+    "chunk_id": "rmp_professor_lehr_review_1",
+    "source": "rmp_professor_lehr",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Ted Lehr",
+    "text": "PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University\n\nREVIEW: I took Software Engineering with Ted Lehr. He was very rude at times and made multiple people cry. The course felt like a dumbed down repeat of OO with some git added. The semester long group project is a decent way to make friends. Difficulty 3/10.",
+    "token_count": 57
+  },
+  {
+    "chunk_id": "rmp_professor_lehr_review_2",
+    "source": "rmp_professor_lehr",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Ted Lehr",
+    "text": "PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University\n\nREVIEW: Lehr is strict about attendance and phones. He will literally stop his lecture and stare at you if you are on your phone. Homework every week, sometimes more. Grading is fair but he does not give extra credit. If you stay on top of the assignments you will be fine.",
+    "token_count": 61
+  },
+  {
+    "chunk_id": "rmp_professor_lehr_review_3",
+    "source": "rmp_professor_lehr",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Ted Lehr",
+    "text": "PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University\n\nREVIEW: Dr. Lehr knows his material inside and out. He is a bit strict — no phones allowed, talking in class will get you removed, and he takes attendance every single day. But if you go to his office hours he is super helpful. The workload is heavy compared to other CS sections.",
+    "token_count": 63
+  },
+  {
+    "chunk_id": "rmp_professor_lehr_review_4",
+    "source": "rmp_professor_lehr",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Ted Lehr",
+    "text": "PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University\n\nREVIEW: Loved this class. Ted Lehr is tough but fair. He gives a lot of programming assignments throughout the semester, usually one every week or two. Exams are multiple choice plus a coding section. He does not curve but the class average is usually decent. Attend every class — he tracks attendance and it counts toward your grade.",
+    "token_count": 68
+  }
+]

@@ -360,6 +360,105 @@
     "token_count": 293
   },
   {
+    "chunk_id": "rmp_professor_lehr_review_0",
+    "source": "rmp_professor_lehr",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Ted Lehr",
+    "text": "PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University\n\nREVIEW: PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University",
+    "token_count": 21
+  },
+  {
+    "chunk_id": "rmp_professor_lehr_review_1",
+    "source": "rmp_professor_lehr",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Ted Lehr",
+    "text": "PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University\n\nREVIEW: I took Software Engineering with Ted Lehr. He was very rude at times and made multiple people cry. The course felt like a dumbed down repeat of OO with some git added. The semester long group project is a decent way to make friends. Difficulty 3/10.",
+    "token_count": 57
+  },
+  {
+    "chunk_id": "rmp_professor_lehr_review_2",
+    "source": "rmp_professor_lehr",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Ted Lehr",
+    "text": "PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University\n\nREVIEW: Lehr is strict about attendance and phones. He will literally stop his lecture and stare at you if you are on your phone. Homework every week, sometimes more. Grading is fair but he does not give extra credit. If you stay on top of the assignments you will be fine.",
+    "token_count": 61
+  },
+  {
+    "chunk_id": "rmp_professor_lehr_review_3",
+    "source": "rmp_professor_lehr",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Ted Lehr",
+    "text": "PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University\n\nREVIEW: Dr. Lehr knows his material inside and out. He is a bit strict — no phones allowed, talking in class will get you removed, and he takes attendance every single day. But if you go to his office hours he is super helpful. The workload is heavy compared to other CS sections.",
+    "token_count": 63
+  },
+  {
+    "chunk_id": "rmp_professor_lehr_review_4",
+    "source": "rmp_professor_lehr",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Ted Lehr",
+    "text": "PROFESSOR: Ted Lehr\nDEPARTMENT: Computer Science — Texas State University\n\nREVIEW: Loved this class. Ted Lehr is tough but fair. He gives a lot of programming assignments throughout the semester, usually one every week or two. Exams are multiple choice plus a coding section. He does not curve but the class average is usually decent. Attend every class — he tracks attendance and it counts toward your grade.",
+    "token_count": 68
+  },
+  {
+    "chunk_id": "rmp_professor_mendez_basanta_review_1",
+    "source": "rmp_professor_mendez_basanta",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Francis Mendez",
+    "text": "PROFESSOR: Francis Mendez\nDEPARTMENT: Biology — Texas State University\n\nREVIEW: Dr. Mendez is a tough grader. His exams are harder than the material you think you know. He does post study guides and practice questions on Canvas — use them. Does not curve individual exams but adjusts final grades slightly at the end.",
+    "token_count": 53
+  },
+  {
+    "chunk_id": "rmp_professor_mendez_basanta_review_2",
+    "source": "rmp_professor_mendez_basanta",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Francis Mendez",
+    "text": "PROFESSOR: Francis Mendez\nDEPARTMENT: Biology — Texas State University\n\nREVIEW: Took Mendez for Bio 1320. Grading is strict but doable if you use his resources. He posts practice multiple choice questions before every exam and I found them really helpful. Would not say his class is easy to pass without effort.",
+    "token_count": 51
+  },
+  {
+    "chunk_id": "rmp_professor_mendez_basanta_review_3",
+    "source": "rmp_professor_mendez_basanta",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Francis Mendez",
+    "text": "PROFESSOR: Francis Mendez\nDEPARTMENT: Biology — Texas State University\n\nREVIEW: Mendez is fair but demanding. His grading criteria are clearly laid out in the syllabus and he sticks to them. Multiple choice exams with no partial credit. Study the practice problems he posts — they are very representative of the actual exam format.\n\nPROFESSOR: Ram Kumar Basanta\nDEPARTMENT: Mathematics — Texas State University",
+    "token_count": 63
+  },
+  {
+    "chunk_id": "rmp_professor_mendez_basanta_review_4",
+    "source": "rmp_professor_mendez_basanta",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Francis Mendez",
+    "text": "PROFESSOR: Francis Mendez\nDEPARTMENT: Biology — Texas State University\n\nREVIEW: Dr. Basanta is a great math professor. Before each exam he posts a full set of practice problems on Canvas. The exam questions are similar in format and difficulty to those practice problems. Highly recommend for Calc II.",
+    "token_count": 48
+  },
+  {
+    "chunk_id": "rmp_professor_mendez_basanta_review_5",
+    "source": "rmp_professor_mendez_basanta",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Francis Mendez",
+    "text": "PROFESSOR: Francis Mendez\nDEPARTMENT: Biology — Texas State University\n\nREVIEW: Basanta is solid. His grading is fair — he gives partial credit on the work-shown sections. The practice problems he releases before exams are extremely helpful and closely mirror the actual tests. I felt prepared going into each exam.",
+    "token_count": 49
+  },
+  {
+    "chunk_id": "rmp_professor_mendez_basanta_review_6",
+    "source": "rmp_professor_mendez_basanta",
+    "url": "",
+    "chunk_type": "rmp_review",
+    "professor": "Francis Mendez",
+    "text": "PROFESSOR: Francis Mendez\nDEPARTMENT: Biology — Texas State University\n\nREVIEW: Took Basanta for Calc II. He posts practice exam questions about a week before the real test and they are very similar to what shows up. If you do all of them and understand the steps you will do well.",
+    "token_count": 50
+  },
+  {
     "chunk_id": "rmp_professor_ramirez_review_0",
     "source": "rmp_professor_ramirez",
     "url": "https://www.ratemyprofessors.com/professor/1957208",

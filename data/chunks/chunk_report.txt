@@ -1,20 +1,21 @@
 ============================================================
 CHUNK REPORT
 ============================================================
-Total chunks    : 56
-Token min       : 35
+Total chunks    : 67
+Token min       : 21
 Token max       : 300
-Token mean      : 256.2
+Token mean      : 222.8
 
 Chunks by type:
   generic              38
   reddit_post          14
-  rmp_review           4
+  rmp_review           15
 
 Chunks by professor detected:
   unknown                        46
+  Ted Lehr                       8
+  Francis Mendez                 6
   Stefanie Ramirez               4
-  Ted Lehr                       3
   Lehr                           3
 
 ============================================================
@@ -22,55 +23,52 @@ Chunks by professor detected:
 ============================================================
 
 --- Sample 1 ---
-ID         : rmp_io_txst_chunk_9
+ID         : professors_directory_txst_chunk_3
+Type       : generic
+Professor  : not detected
+Token count: 300
+Source     : professors_directory_txst
+Text preview:
+Instruction 10 Rate Dolores Van Der Kolk Geology 14 Rate Alyssa Crow English 3 Rate J Moczygemba Health Information Science 0 Rate J Jillapalli Marketing 0 Rate J Moreau Physical Ed 0 Rate J Vaughan Geography 0 Rate Richard Wheeler Psychology 0 Rate Katherine Dierschke Spanish 0 Rate Kyle Glaser Music 11 Rate Chris Hale Business Law 0 Rate Roger Colombik Art Design 0 Rate P G Power Spanish 0 Rate Stephen Prentice University Seminar 0 Rate Sean Justice Art amp Design 1 Rate Catherine Sass Mathema
+  [...truncated]
+
+--- Sample 2 ---
+ID         : rmp_txst_school_chunk_1
+Type       : generic
+Professor  : not detected
+Token count: 300
+Source     : rmp_txst_school
+Text preview:
+Overall 4.2 Apr 30th, 2026 love it here Reputation Location Opportunities Facilities Internet Food Clubs Social Happiness Safety Helpful 0 0 Overall 3.9 Apr 30th, 2026 overall pretty good Reputation Location Opportunities Facilities Internet Food Clubs Social Happiness Safety Helpful 0 0 1013 Ratings Overall 4.3 May 16th, 2026 I love this school. Plenty of opportunities to socialize and meet people. The river on campus is amazing. Professors can be hit or miss, but they're usually good. Reputati
+  [...truncated]
+
+--- Sample 3 ---
+ID         : rmp_io_txst_chunk_10
 Type       : generic
 Professor  : not detected
 Token count: 300
 Source     : rmp_io_txst
 Text preview:
-School: Texas State University City: San Marcos State: Texas Department: Languages Helpful Score: 4.3 Easy Score: 2.9 Clarity Score: 4.3 Professor: Hayley Gillespie School: Texas State University City: San Marcos State: Texas Department: Biology Helpful Score: 1.3 Easy Score: 4.5 Clarity Score: 1.3 Professor: Hugo Antonio Pedrozo School: Texas State University City: San Marcos State: Texas Department: Biology Helpful Score: 2.9 Easy Score: 4.2 Clarity Score: 2.9 Professor: Vince Bagnulo School: 
-  [...truncated]
-
---- Sample 2 ---
-ID         : professors_directory_txst_chunk_1
-Type       : generic
-Professor  : not detected
-Token count: 300
-Source     : professors_directory_txst
-Text preview:
-Dunn History 2 Rate D Griffin Communication 0 Rate D Holmes Freshman Year Experience 0 Rate Holly Wise Journalism 0 Rate Matthew Hood Finance 16 Rate Keri Fitzgerald Literature 6 Rate Joseph Etherton Psychology 0 Rate L Swol Management 0 Rate Cody Chumbley Philosophy 0 Rate Shane Smith Theater 1 Rate Thomas Clark Criminal Justice 0 Rate A. H. Batey Engineering 3 Rate Paul Mencke Education 28 Rate C J Neef Chemistry 0 Rate C A Pier Accounting 0 Rate K Seal Geography 3 Rate S W Theode Accounting 0
-  [...truncated]
-
---- Sample 3 ---
-ID         : professors_directory_txst_chunk_4
-Type       : generic
-Professor  : not detected
-Token count: 300
-Source     : professors_directory_txst
-Text preview:
-Rate Jana Proff Communication Disorders 0 Rate Tondra Moore Health Information Science 0 Rate C. Lynne Fulmer Philosophy 0 Rate Teresa Zapp Curriculum Instruction 0 Rate Claudia Trevino University Seminar 0 Rate Natalie Myers Athletics 9 Rate Robert J.C. McLean Biology 1 Rate Shiva Rastogi Chemistry 23 Rate A Paz Criminal Justice 0 Rate A. Richard Anthropology 0 Rate A R Sullivan Political Science 0 Rate Cheri DeVol Theater 0 Rate Jeffrey Allison Chemistry 26 Rate Elizabeth Kanon Philosophy 7 Ra
+Marcos State: Texas Department: Mathematics Helpful Score: 3.5 Easy Score: 3.7 Clarity Score: 3.5 Professor: Leslie Shroyer School: Texas State University City: San Marcos State: Texas Department: Mathematics Helpful Score: 2.5 Easy Score: 3.4 Clarity Score: 2.5 Professor: Allison Robinson School: Texas State University City: San Marcos State: Texas Department: History Helpful Score: 4.54 Easy Score: 3.69 Clarity Score: 4.54 Professor: Deborah Fisher School: Texas State University City: San Marc
   [...truncated]
 
 --- Sample 4 ---
-ID         : reddit_txstate_search_rmp_post_3
+ID         : reddit_txstate_search_rmp_post_2
 Type       : reddit_post
 Professor  : not detected
-Token count: 278
+Token count: 254
 Source     : reddit_txstate_search_rmp
 Text preview:
-POST TITLE: Class Withdrawal question — RMP reviews match my experience
-POST BODY: I am struggling in a class. I've found that the material given does not match the quizzes. I read the reviews on RateMyProfessor and it seems just about everyone struggles with the same thing. Would withdrawing from the class be a good idea to protect my GPA? I would much rather have a W on my transcript than a C or D.
-
-POST TITLE: BIOL 1330 — anyone taken Dr. Kumar?
-POST BODY: Has anyone taken functional biology 
+POST TITLE: Extension to augment class listings with RateMyProfessors ratings
+POST BODY: I just finished a browser extension that adds RateMyProfessors ratings directly into the TXST course catalog. Available on Chrome, Edge, and Firefox. Two issues to watch out for: discrepancies in diacritics between professor names as listed in the catalog vs on the RMP website — if your professor shows as not found, click the card to search via the website. Also some columns are hidden to keep the page reada
   [...truncated]
 
 --- Sample 5 ---
-ID         : uloop_txst_professors_chunk_3
+ID         : coursicle_txst_professors_chunk_0
 Type       : generic
 Professor  : not detected
-Token count: 300
-Source     : uloop_txst_professors
+Token count: 104
+Source     : coursicle_txst_professors
 Text preview:
-Z Mary Odum-Dixon Health & Physical Education Professor Ratings near Texas State UT Austin professor ratings Texas A&M professor ratings UH professor ratings Rice professor ratings St. Edward's professor ratings Texas Tech professor ratings UTHSCSA professor ratings UTHSC-H professor ratings UNT professor ratings Blinn College professor ratings UTEP professor ratings TWU professor ratings Texas State Professor Ratings Searching Texas State professor ratings has never been easier. Browse for teac
+Professors at TXST Browse 5169 professors Aamar DanishAaron BonnetteAaron BrownAaron DuronAaron EmerichAaron HandAaron MayAaron SparksAaron SwinkAbbe OdenAbbey HudginsAbbigail GrayAbby TrainAbdullah AlfarhanAbdurrahman AlmikatiAbel GuevaraAbel RodriguezAbhilash MekamAbhipsita DasAbigail Brady+ 5149 more Professors at TXST Aamar Danish Departments MSEC, CIM Email oyf7@txstate.edu Recent Semesters Teaching Fall 2026, Spring 2026, Fall 2025 Typical Class Size 30-45 Fall 2026 Classes View Aamar Dani
   [...truncated]
