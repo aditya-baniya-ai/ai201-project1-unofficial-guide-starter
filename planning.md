@@ -134,7 +134,7 @@ Document Ingestion          Chunking              Embedding + Vector Store      
 - **Expected output:** A Python script that fetches or scrapes each source and saves raw text to a local `/data/raw/` folder, with one file per source
 - **Verification:** Manually open 2–3 of the output files and confirm the raw review text is present and readable, not HTML tags or boilerplate
 
-### Milestone 2 — Chunking (`chunk.py`)
+### Milestone 2 — Chunking (`chunker.py`)
 - **Tool:** Claude
 - **Input:** The Chunking Strategy section of this `planning.md` verbatim, plus the raw text files from Stage 1
 - **Expected output:** A `chunk_text()` function that splits text into 300-token chunks with 30-token overlap, applies the Reddit rule (post + top reply = one chunk), and saves chunks to `/data/chunks/` as JSON with metadata (source URL, professor name if detectable)

@@ -2,16 +2,17 @@
 generate.py — Stage 5: Generation
 TXST Professor Reviews RAG Pipeline
 
-Retrieves the top 3 chunks for a query using retrieve.py,
-formats them into a prompt, and sends to Groq (llama-3.3-70b-versatile)
-to generate a grounded answer.
-
-Usage (interactive):
-  python generate.py
+Retrieves top-k chunks, sends them to Groq with a strict grounding prompt,
+and returns both the answer AND a programmatic source list.
 
 Usage (as a module):
-  from generate import generate
-  answer = generate("Does Ted Lehr give a lot of homework?")
+  from generate import ask
+  result = ask("Does Ted Lehr give a lot of homework?")
+  print(result["answer"])
+  print(result["sources"])
+
+Usage (standalone test):
+  python generate.py
 
 Requirements:
   pip install groq python-dotenv
@@ -23,7 +24,7 @@ from dotenv import load_dotenv
 from groq import Groq
 from retrieve import retrieve
 
-# ── Load API key from .env ────────────────────────────────────────────────────
+# ── Load API key ──────────────────────────────────────────────────────────────
 
 load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
@@ -33,94 +34,137 @@ if not GROQ_API_KEY:
 client = Groq(api_key=GROQ_API_KEY)
 MODEL  = "llama-3.3-70b-versatile"
 
+# ── Grounding prompt ──────────────────────────────────────────────────────────
+# "enforce" not "suggest" — the model is told it has NO other source of truth
 
-# ── Prompt template ───────────────────────────────────────────────────────────
+SYSTEM_PROMPT = """You are an unofficial guide for Texas State University (TXST) students.
+You answer questions about professors EXCLUSIVELY from the student review excerpts provided.
 
-SYSTEM_PROMPT = """You are a helpful unofficial guide for Texas State University (TXST) students.
-Your job is to answer questions about professors based ONLY on the student reviews and posts provided to you.
-
-Rules:
-- Only use information from the provided context chunks.
-- If the context does not contain enough information to answer, say so clearly.
-- Do not invent or assume details not present in the context.
+STRICT RULES:
+- You may ONLY use information explicitly stated in the provided review excerpts.
+- If the excerpts do not contain enough information to answer the question, you MUST respond with:
+  "I don't have enough information in my sources to answer that."
+- Do NOT use your general training knowledge about professors, universities, or teaching styles.
+- Do NOT invent, assume, or infer details that are not in the excerpts.
+- Do NOT say things like "typically" or "generally" — only say what the reviews actually state.
 - Keep answers concise and student-friendly.
-- If reviews conflict with each other, mention both perspectives.
-- Always mention which professor the answer is about."""
+- If reviews conflict, present both perspectives.
+- Do not add a source list — sources will be added separately."""
 
 
 def build_prompt(query: str, chunks: list[dict]) -> str:
-    """Format retrieved chunks into a context block for the LLM."""
+    """Format retrieved chunks into a numbered context block."""
     context_parts = []
     for i, chunk in enumerate(chunks, 1):
-        professor = chunk["professor"] or "unknown professor"
+        professor = chunk["professor"] or "unknown"
         source    = chunk["source"]
         context_parts.append(
-            f"[Source {i} — {source} — Professor: {professor}]\n{chunk['text']}"
+            f"[Excerpt {i} | source: {source} | professor: {professor}]\n{chunk['text']}"
         )
-
     context = "\n\n---\n\n".join(context_parts)
-
-    return f"""Here are the most relevant student reviews and posts I found:
+    return f"""Use ONLY the following student review excerpts to answer the question.
+If the excerpts don't contain the answer, say so explicitly.
 
 {context}
 
 ---
 
-Based only on the above, please answer this question:
-{query}"""
+Question: {query}
+Answer:"""
 
 
-# ── Main generation function ──────────────────────────────────────────────────
-
-def generate(query: str, top_k: int = 3) -> str:
+def format_sources(chunks: list[dict]) -> list[str]:
     """
-    Retrieve top_k chunks for the query and generate a grounded answer.
+    Build a deduplicated, human-readable source list from retrieved chunks.
+    This is done programmatically — not left to the LLM.
+    """
+    seen   = set()
+    sources = []
+    for chunk in chunks:
+        source    = chunk.get("source", "unknown")
+        professor = chunk.get("professor", "")
+        url       = chunk.get("url", "")
+        label = f"{source}"
+        if professor:
+            label += f" (professor: {professor})"
+        if url:
+            label += f" — {url}"
+        if label not in seen:
+            seen.add(label)
+            sources.append(label)
+    return sources
+
+
+# ── Main function ─────────────────────────────────────────────────────────────
+
+def ask(query: str, top_k: int = 3) -> dict:
+    """
+    Full RAG pipeline: retrieve → prompt → generate → return with sources.
 
     Args:
         query:  the student's question
-        top_k:  number of chunks to retrieve (default 3)
+        top_k:  chunks to retrieve (default 3)
 
     Returns:
-        answer string from the LLM
+        dict with keys:
+            "answer"  — grounded answer string from the LLM
+            "sources" — list of source strings (programmatically built)
+            "chunks"  — raw retrieved chunks (for debugging)
     """
-    # Stage 4: retrieve
     chunks = retrieve(query, top_k=top_k)
 
     if not chunks:
-        return "I could not find any relevant reviews to answer that question."
+        return {
+            "answer":  "I don't have enough information in my sources to answer that.",
+            "sources": [],
+            "chunks":  [],
+        }
 
-    # Build prompt
-    prompt = build_prompt(query, chunks)
+    prompt  = build_prompt(query, chunks)
+    sources = format_sources(chunks)   # built from metadata, not from LLM
 
-    # Stage 5: generate
     response = client.chat.completions.create(
         model=MODEL,
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user",   "content": prompt},
         ],
-        temperature=0.2,   # low temperature = more factual, less creative
+        temperature=0.2,
         max_tokens=512,
     )
 
-    return response.choices[0].message.content
+    answer = response.choices[0].message.content.strip()
+
+    return {
+        "answer":  answer,
+        "sources": sources,
+        "chunks":  chunks,
+    }
 
 
-# ── Standalone: run all 5 evaluation questions ────────────────────────────────
+# ── Standalone test ───────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    eval_questions = [
+    test_questions = [
+        # Evaluation plan questions
         "Does Professor Ted give a lot of assignments?",
         "Is Dr. Lehr very strict about his attendance policies?",
         "Is Dr. Lehr angry if someone uses a phone in his class?",
         "Is Dr. Francis Mendez's grading criteria easy to pass?",
         "Does Dr. Ram Kumar Basanta give exam questions prior to exams?",
+        # Grounding test — should say "I don't have enough information"
+        "What is Dr. Lehr's office hours schedule?",
+        "Does TXST have a good computer science department overall?",
     ]
 
-    for question in eval_questions:
+    for question in test_questions:
         print("=" * 60)
         print(f"Q: {question}")
         print("=" * 60)
-        answer = generate(question)
-        print(f"A: {answer}")
+        result = ask(question)
+        print(f"A: {result['answer']}")
+        print()
+        print("Sources:")
+        for s in result["sources"]:
+            print(f"  • {s}")
         print()
