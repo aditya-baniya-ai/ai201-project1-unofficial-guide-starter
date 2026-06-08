@@ -1,0 +1,38 @@
+[
+  {
+    "chunk_id": "rmp_professor_ramirez_review_0",
+    "source": "rmp_professor_ramirez",
+    "url": "https://www.ratemyprofessors.com/professor/1957208",
+    "chunk_type": "rmp_review",
+    "professor": "Stefanie Ramirez",
+    "text": "PROFESSOR: Stefanie Ramirez Professor in the Family Consumer Science department at Texas State University\nDEPARTMENT: Stefanie Ramirez\n\nREVIEW: PROFESSOR: Stefanie Ramirez Professor in the Family Consumer Science department at Texas State University\nDEPARTMENT: Stefanie Ramirez",
+    "token_count": 35
+  },
+  {
+    "chunk_id": "rmp_professor_ramirez_review_1",
+    "source": "rmp_professor_ramirez",
+    "url": "https://www.ratemyprofessors.com/professor/1957208",
+    "chunk_type": "rmp_review",
+    "professor": "Stefanie Ramirez",
+    "text": "PROFESSOR: Stefanie Ramirez Professor in the Family Consumer Science department at Texas State University\nDEPARTMENT: Stefanie Ramirez\n\nREVIEW: CA1347 Nov 30th, 2020 Quality 1.0 Difficulty 5.0 CA1347 Nov 30th, 2020 For Credit : Yes Attendance : Mandatory Would Take Again : No Textbook : No THIS IS THE WORST professor at Texas State. I could go on and on but the other reviews pretty much sum it up. I would rather eat a jean jacket than take this professor again. Skip class? You won't pass. Test heavy Tough grader Helpful 0 0",
+    "token_count": 92
+  },
+  {
+    "chunk_id": "rmp_professor_ramirez_review_2",
+    "source": "rmp_professor_ramirez",
+    "url": "https://www.ratemyprofessors.com/professor/1957208",
+    "chunk_type": "rmp_review",
+    "professor": "Stefanie Ramirez",
+    "text": "PROFESSOR: Stefanie Ramirez Professor in the Family Consumer Science department at Texas State University\nDEPARTMENT: Stefanie Ramirez\n\nREVIEW: CA3341 Oct 20th, 2020 Quality 1.0 Difficulty 3.0 CA3341 Oct 20th, 2020 For Credit : Yes Attendance : Mandatory Would Take Again : No Grade : Not sure yet Textbook : Yes Online Class : Yes Professor Ramirez was the worst professor I've ever had. It seemed like she had no idea what she was doing. She wasn't even the professor I signed up for, she was just placed as my professor a week before the semester began. If you miss class, it affects your grade, and if you turn in an assignment titled wrong she takes off points. don't take her! Participation matters Skip class? You won't pass. Lecture heavy Helpful 0 0",
+    "token_count": 132
+  },
+  {
+    "chunk_id": "rmp_professor_ramirez_review_3",
+    "source": "rmp_professor_ramirez",
+    "url": "https://www.ratemyprofessors.com/professor/1957208",
+    "chunk_type": "rmp_review",
+    "professor": "Stefanie Ramirez",
+    "text": "PROFESSOR: Stefanie Ramirez Professor in the Family Consumer Science department at Texas State University\nDEPARTMENT: Stefanie Ramirez\n\nREVIEW: FACS3378 May 2nd, 2019 Quality 1.0 Difficulty 5.0 FACS3378 May 2nd, 2019 For Credit : Yes Attendance : Mandatory Would Take Again : No Grade : Not sure yet Textbook : Yes Avoiding taking Ramirez and you will be glad you did! She is the worse professor I have ever had at my time at Sam. She spends so much time on 1 slide with 'um' in every sentence. Her test are nothing compared the review and she makes you feel stupid any chance she gets. The amount of work she requires outside of class is ridiculous. Run now Lots of homework Test heavy Tough grader Helpful 1 0",
+    "token_count": 127
+  }
+]

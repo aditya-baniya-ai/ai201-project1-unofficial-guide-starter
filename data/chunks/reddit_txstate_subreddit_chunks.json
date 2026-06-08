@@ -1,0 +1,29 @@
+[
+  {
+    "chunk_id": "reddit_txstate_subreddit_post_0",
+    "source": "reddit_txstate_subreddit",
+    "url": "https://old.reddit.com/r/txstate/",
+    "chunk_type": "reddit_post",
+    "professor": "Ted Lehr",
+    "text": "POST TITLE: Comprehensive rundown of TXST Computer Science professors — who to take and who to avoid\nPOST BODY: I took Software Engineering with Ted Lehr. He was very rude at times and made multiple people cry. The course felt like a dumbed down repeat of OO with some git added. The semester long group project is a decent way to make friends at least. Difficulty 3/10. I took Parallel Programming with Martin Burtscher — very valuable experience, do not miss the chance. He is in a different league as far as lecturing goes. Difficulty 8/10. Lee Koh for Data Structures is outstanding and one of the most difficult in the department but will really improve your programming skills. John Durrett for Computer Ethics is an absolute nightmare — he ranted about extreme political views every day and barely discussed CS. Martin Burtscher would fit right in teaching at a top 10 school. Anne Ngu for Database Systems is great. Ziliang Zong for OS is one of the hardest — you can tell he cares more about research than teaching.\n\nPOST TITLE: Welcome to Texas State — tips and tricks for new Bobcats\nPOST BODY: Network with professors and everyone you can while you are here. Use the HB 2504 site on the Texas State website to find course evaluations and syllabi before registering — it is far more useful than RateMyProfessor alone. Use SLAC, Math Cats, and the Writing Center for tutoring. Talk to your professor directly if Canvas does not show your course or if the internet ate your homework — only they can fix it. Use your Texas State email for Texas State things only since you will lose access after graduating.",
+    "token_count": 285
+  },
+  {
+    "chunk_id": "reddit_txstate_subreddit_post_1",
+    "source": "reddit_txstate_subreddit",
+    "url": "https://old.reddit.com/r/txstate/",
+    "chunk_type": "reddit_post",
+    "professor": "",
+    "text": "POST TITLE: Welcome to Texas State — tips and tricks for new Bobcats\nPOST BODY: Network with professors and everyone you can while you are here. Use the HB 2504 site on the Texas State website to find course evaluations and syllabi before registering — it is far more useful than RateMyProfessor alone. Use SLAC, Math Cats, and the Writing Center for tutoring. Talk to your professor directly if Canvas does not show your course or if the internet ate your homework — only they can fix it. Use your Texas State email for Texas State things only since you will lose access after graduating.\n\nPOST TITLE: I made a site for comparing professor evaluation results at TXST\nPOST BODY: I created a website at https://opletter.github.io/course-evals/txst/ for viewing and comparing professor course evaluation data based on all available HB2504 data. You can view and compare professor ratings overall and by specific courses. The website highlights professors teaching next semester which helps with picking courses during registration.\n\nPOST TITLE: PSA — you can report a bad professor at TXST\nPOST BODY: I am a grad student and one of my professors is very unprofessional — she yells, demeans students, and acts like anything students ask is a burden. I finally went and reported her and it felt amazing. Just came here to say: no matter if your professor is tenured or not, report them if they are not doing their job. We pay to take classes and they are there to teach. If dealing with students is too inconvenient for them then they need to find another job. The process is taken very seriously.",
+    "token_count": 273
+  },
+  {
+    "chunk_id": "reddit_txstate_subreddit_post_2",
+    "source": "reddit_txstate_subreddit",
+    "url": "https://old.reddit.com/r/txstate/",
+    "chunk_type": "reddit_post",
+    "professor": "",
+    "text": "POST TITLE: PSA — you can report a bad professor at TXST\nPOST BODY: I am a grad student and one of my professors is very unprofessional — she yells, demeans students, and acts like anything students ask is a burden. I finally went and reported her and it felt amazing. Just came here to say: no matter if your professor is tenured or not, report them if they are not doing their job. We pay to take classes and they are there to teach. If dealing with students is too inconvenient for them then they need to find another job. The process is taken very seriously.\n\nPOST TITLE: Interested in Ancient and Medieval Political Thought — PS4311 at TXST\nPOST BODY: I am an Associate Professor of Political Science at TXST. I try my best to be a fair professor and to be interesting. I really love this subject and love my students. I also have a YouTube channel with recordings of readings and lectures you could check out if you would like to see a little about what the material or teaching style is like in my courses. Consider signing up if you are interested in political thought — I do not get a chance to teach it every semester.\n\nPOST TITLE: Positive experiences with TXST professors\nPOST BODY: My daughter is a freshman at TXST. She likes her professors and is enjoying everything about the university. I mostly see negative experiences posted online but wanted to express that it does not apply to everyone. She is making a lot of friends and enjoying the football games. It is great to see her excited to be social again after a tough few years in high school.",
+    "token_count": 288
+  }
+]

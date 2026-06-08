@@ -1,0 +1,47 @@
+[
+  {
+    "chunk_id": "reddit_txstate_search_rmp_post_0",
+    "source": "reddit_txstate_search_rmp",
+    "url": "https://old.reddit.com/r/txstate/search/?q=rate+my+professor&restrict_sr=1&sort=top",
+    "chunk_type": "reddit_post",
+    "professor": "Ted Lehr",
+    "text": "POST TITLE: Comprehensive rundown of TXST Computer Science — professor ratings you can actually trust\nPOST BODY: Don't fully trust RateMyProfessor. For example, Koh has a lower score than many others but he is one of the best. A lot of professors that have the least to offer have the very high ratings. I took Software Engineering with Ted Lehr. He was very rude at times and made multiple people cry. I felt like this course was a dumbed down repeat of OO with some git. The group project is a decent way to make friends. Difficulty 3/10. Lee Koh for Data Structures is outstanding — one of the most difficult professors in the department but he will really improve your programming skills. Martin Burtscher for Parallel Programming is in a different league as far as lecturing goes — he would fit right in at a top 10 school. Anne Ngu for Database Systems is great, I learned a ton. Ziliang Zong for OS cares more about research than teaching — I suspect a third of the class failed.\n\nPOST TITLE: Some advice — use HB 2504, not just RateMyProfessor\nPOST BODY: So I'm sure most of us rely on RateMyProfessor when registering for classes. However, in many cases there are not enough reviews to be helpful. Go to the Texas State website and type in HB 2504. Not only will it show you the ratings given by students for course evaluations, but it also has the syllabus so you can check out what the class entails. Far more helpful than RMP alone.",
+    "token_count": 263
+  },
+  {
+    "chunk_id": "reddit_txstate_search_rmp_post_1",
+    "source": "reddit_txstate_search_rmp",
+    "url": "https://old.reddit.com/r/txstate/search/?q=rate+my+professor&restrict_sr=1&sort=top",
+    "chunk_type": "reddit_post",
+    "professor": "",
+    "text": "POST TITLE: Some advice — use HB 2504, not just RateMyProfessor\nPOST BODY: So I'm sure most of us rely on RateMyProfessor when registering for classes. However, in many cases there are not enough reviews to be helpful. Go to the Texas State website and type in HB 2504. Not only will it show you the ratings given by students for course evaluations, but it also has the syllabus so you can check out what the class entails. Far more helpful than RMP alone.\n\nPOST TITLE: Rate my professor saving my life\nPOST BODY: Already changed out of his class since there were a lot of people saying the same bad stuff about him. Incoming freshman at the moment and I am trying to dodge as many bullets as possible. RMP was really accurate and matched what other students told me about this professor.\n\nPOST TITLE: Extension to augment class listings with RateMyProfessors ratings\nPOST BODY: I just finished a browser extension that adds RateMyProfessors ratings directly into the TXST course catalog. Available on Chrome, Edge, and Firefox. Two issues to watch out for: discrepancies in diacritics between professor names as listed in the catalog vs on the RMP website — if your professor shows as not found, click the card to search via the website. Also some columns are hidden to keep the page readable. Hopefully some of you find it useful for registration.",
+    "token_count": 235
+  },
+  {
+    "chunk_id": "reddit_txstate_search_rmp_post_2",
+    "source": "reddit_txstate_search_rmp",
+    "url": "https://old.reddit.com/r/txstate/search/?q=rate+my+professor&restrict_sr=1&sort=top",
+    "chunk_type": "reddit_post",
+    "professor": "",
+    "text": "POST TITLE: Extension to augment class listings with RateMyProfessors ratings\nPOST BODY: I just finished a browser extension that adds RateMyProfessors ratings directly into the TXST course catalog. Available on Chrome, Edge, and Firefox. Two issues to watch out for: discrepancies in diacritics between professor names as listed in the catalog vs on the RMP website — if your professor shows as not found, click the card to search via the website. Also some columns are hidden to keep the page readable. Hopefully some of you find it useful for registration.\n\nPOST TITLE: Double check your classes and their respective instructors often\nPOST BODY: One of the professors I chose because they had good RateMyProfessor ratings was changed to someone else without notification. I signed up for CS 3354 with Dr. King a few months ago. Today I noticed he was swapped with a newer professor who had lower RMP ratings. I wanted to share this just in case there are others who are also picky about who they take classes with. Always double check before the semester starts.\n\nPOST TITLE: Class Withdrawal question — RMP reviews match my experience\nPOST BODY: I am struggling in a class. I've found that the material given does not match the quizzes. I read the reviews on RateMyProfessor and it seems just about everyone struggles with the same thing. Would withdrawing from the class be a good idea to protect my GPA? I would much rather have a W on my transcript than a C or D.",
+    "token_count": 254
+  },
+  {
+    "chunk_id": "reddit_txstate_search_rmp_post_3",
+    "source": "reddit_txstate_search_rmp",
+    "url": "https://old.reddit.com/r/txstate/search/?q=rate+my+professor&restrict_sr=1&sort=top",
+    "chunk_type": "reddit_post",
+    "professor": "",
+    "text": "POST TITLE: Class Withdrawal question — RMP reviews match my experience\nPOST BODY: I am struggling in a class. I've found that the material given does not match the quizzes. I read the reviews on RateMyProfessor and it seems just about everyone struggles with the same thing. Would withdrawing from the class be a good idea to protect my GPA? I would much rather have a W on my transcript than a C or D.\n\nPOST TITLE: BIOL 1330 — anyone taken Dr. Kumar?\nPOST BODY: Has anyone taken functional biology with Dr. Kumar? I'm a little scared after looking him up on RateMyProfessor. His reviews seem pretty negative — mostly about unclear grading and fast-paced lectures. Anyone have a more recent experience with him?\n\nPOST TITLE: Who has had Dr. Samuel Obara for College Algebra?\nPOST BODY: I have him for college algebra and checked RateMyProfessor before scheduling him and he had decent scores, but every single class feels almost like a waste of time. A majority of the time he pulls random questions from the homework and shows how to do them but does not actually teach the overall topic, so you go into the homework blind. He also has a thick accent which makes him hard to understand and it is too late to switch classes. Does anyone else have him and struggle this much?\n\nPOST TITLE: Opinion on Peng Wuxu for CS 5310?\nPOST BODY: I have learned not to put too much faith in RateMyProfessor since some students self-admittedly try to abuse the rating system. I am mainly asking for personal experiences. Please give details if possible about teaching style, grading, and workload.",
+    "token_count": 278
+  },
+  {
+    "chunk_id": "reddit_txstate_search_rmp_post_4",
+    "source": "reddit_txstate_search_rmp",
+    "url": "https://old.reddit.com/r/txstate/search/?q=rate+my+professor&restrict_sr=1&sort=top",
+    "chunk_type": "reddit_post",
+    "professor": "",
+    "text": "POST TITLE: Opinion on Peng Wuxu for CS 5310?\nPOST BODY: I have learned not to put too much faith in RateMyProfessor since some students self-admittedly try to abuse the rating system. I am mainly asking for personal experiences. Please give details if possible about teaching style, grading, and workload.\n\nPOST TITLE: Rate my professors — none of my teachers are listed\nPOST BODY: The way none of my teachers are on RateMyProfessors — how do I know if they are good teachers or teachers I need to stay away from? Is there another resource for finding out about professors at TXST who don't have reviews yet?",
+    "token_count": 107
+  }
+]

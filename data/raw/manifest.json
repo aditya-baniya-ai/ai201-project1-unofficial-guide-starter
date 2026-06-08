@@ -1,0 +1,91 @@
+[
+  {
+    "slug": "rmp_txst_school",
+    "url": "https://www.ratemyprofessors.com/school/938",
+    "source_type": "rmp_school",
+    "file": "/Users/aadityabaniya/Documents/Codepath/ai201-project1-unofficial-guide-starter/data/raw/rmp_txst_school.txt",
+    "word_count": 1423,
+    "fetched_at": "2026-06-08T03:16:49.566224",
+    "status": "ok"
+  },
+  {
+    "slug": "rmp_txst_all_professors",
+    "url": "https://www.ratemyprofessors.com/search/professors/938?q=*",
+    "source_type": "rmp_search",
+    "file": "/Users/aadityabaniya/Documents/Codepath/ai201-project1-unofficial-guide-starter/data/raw/rmp_txst_all_professors.txt",
+    "word_count": 180,
+    "fetched_at": "2026-06-08T03:16:51.492067",
+    "status": "ok"
+  },
+  {
+    "slug": "rmp_professor_ramirez",
+    "url": "https://www.ratemyprofessors.com/professor/1957208",
+    "source_type": "rmp_professor",
+    "file": "/Users/aadityabaniya/Documents/Codepath/ai201-project1-unofficial-guide-starter/data/raw/rmp_professor_ramirez.txt",
+    "word_count": 317,
+    "fetched_at": "2026-06-08T03:16:53.454963",
+    "status": "ok"
+  },
+  {
+    "slug": "coursicle_txst_professors",
+    "url": "https://www.coursicle.com/txstate/professors/",
+    "source_type": "generic",
+    "file": "/Users/aadityabaniya/Documents/Codepath/ai201-project1-unofficial-guide-starter/data/raw/coursicle_txst_professors.txt",
+    "status": "error: 429 Client Error: Too Many Requests for url: https://www.coursicle.com/txstate/professors/",
+    "fetched_at": "2026-06-08T03:16:55.255702"
+  },
+  {
+    "slug": "reddit_txstate_subreddit",
+    "url": "https://old.reddit.com/r/txstate/",
+    "source_type": "reddit_listing",
+    "file": "/Users/aadityabaniya/Documents/Codepath/ai201-project1-unofficial-guide-starter/data/raw/reddit_txstate_subreddit.txt",
+    "word_count": 10,
+    "fetched_at": "2026-06-08T03:16:57.073339",
+    "status": "ok"
+  },
+  {
+    "slug": "reddit_txstate_search_professor",
+    "url": "https://old.reddit.com/r/txstate/search/?q=professor&restrict_sr=1&sort=top",
+    "source_type": "reddit_listing",
+    "file": "/Users/aadityabaniya/Documents/Codepath/ai201-project1-unofficial-guide-starter/data/raw/reddit_txstate_search_professor.txt",
+    "word_count": 10,
+    "fetched_at": "2026-06-08T03:16:58.811507",
+    "status": "ok"
+  },
+  {
+    "slug": "reddit_txstate_search_rmp",
+    "url": "https://old.reddit.com/r/txstate/search/?q=rate+my+professor&restrict_sr=1&sort=top",
+    "source_type": "reddit_listing",
+    "file": "/Users/aadityabaniya/Documents/Codepath/ai201-project1-unofficial-guide-starter/data/raw/reddit_txstate_search_rmp.txt",
+    "word_count": 10,
+    "fetched_at": "2026-06-08T03:17:00.555970",
+    "status": "ok"
+  },
+  {
+    "slug": "uloop_txst_professors",
+    "url": "https://txstate.uloop.com/professors",
+    "source_type": "generic",
+    "file": "/Users/aadityabaniya/Documents/Codepath/ai201-project1-unofficial-guide-starter/data/raw/uloop_txst_professors.txt",
+    "word_count": 1209,
+    "fetched_at": "2026-06-08T03:17:02.842886",
+    "status": "ok"
+  },
+  {
+    "slug": "professors_directory_txst",
+    "url": "https://www.professors.directory/school/tx-texas_state_university/",
+    "source_type": "generic",
+    "file": "/Users/aadityabaniya/Documents/Codepath/ai201-project1-unofficial-guide-starter/data/raw/professors_directory_txst.txt",
+    "word_count": 1637,
+    "fetched_at": "2026-06-08T03:17:05.012435",
+    "status": "ok"
+  },
+  {
+    "slug": "rmp_io_txst",
+    "url": "https://ratemyprofessors.io/texas-state-university",
+    "source_type": "generic",
+    "file": "/Users/aadityabaniya/Documents/Codepath/ai201-project1-unofficial-guide-starter/data/raw/rmp_io_txst.txt",
+    "word_count": 5153,
+    "fetched_at": "2026-06-08T03:17:07.233126",
+    "status": "ok"
+  }
+]

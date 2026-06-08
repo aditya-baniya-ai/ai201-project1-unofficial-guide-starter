@@ -1,0 +1,29 @@
+POST TITLE: Comprehensive rundown of TXST Computer Science — professor ratings you can actually trust
+POST BODY: Don't fully trust RateMyProfessor. For example, Koh has a lower score than many others but he is one of the best. A lot of professors that have the least to offer have the very high ratings. I took Software Engineering with Ted Lehr. He was very rude at times and made multiple people cry. I felt like this course was a dumbed down repeat of OO with some git. The group project is a decent way to make friends. Difficulty 3/10. Lee Koh for Data Structures is outstanding — one of the most difficult professors in the department but he will really improve your programming skills. Martin Burtscher for Parallel Programming is in a different league as far as lecturing goes — he would fit right in at a top 10 school. Anne Ngu for Database Systems is great, I learned a ton. Ziliang Zong for OS cares more about research than teaching — I suspect a third of the class failed.
+
+POST TITLE: Some advice — use HB 2504, not just RateMyProfessor
+POST BODY: So I'm sure most of us rely on RateMyProfessor when registering for classes. However, in many cases there are not enough reviews to be helpful. Go to the Texas State website and type in HB 2504. Not only will it show you the ratings given by students for course evaluations, but it also has the syllabus so you can check out what the class entails. Far more helpful than RMP alone.
+
+POST TITLE: Rate my professor saving my life
+POST BODY: Already changed out of his class since there were a lot of people saying the same bad stuff about him. Incoming freshman at the moment and I am trying to dodge as many bullets as possible. RMP was really accurate and matched what other students told me about this professor.
+
+POST TITLE: Extension to augment class listings with RateMyProfessors ratings
+POST BODY: I just finished a browser extension that adds RateMyProfessors ratings directly into the TXST course catalog. Available on Chrome, Edge, and Firefox. Two issues to watch out for: discrepancies in diacritics between professor names as listed in the catalog vs on the RMP website — if your professor shows as not found, click the card to search via the website. Also some columns are hidden to keep the page readable. Hopefully some of you find it useful for registration.
+
+POST TITLE: Double check your classes and their respective instructors often
+POST BODY: One of the professors I chose because they had good RateMyProfessor ratings was changed to someone else without notification. I signed up for CS 3354 with Dr. King a few months ago. Today I noticed he was swapped with a newer professor who had lower RMP ratings. I wanted to share this just in case there are others who are also picky about who they take classes with. Always double check before the semester starts.
+
+POST TITLE: Class Withdrawal question — RMP reviews match my experience
+POST BODY: I am struggling in a class. I've found that the material given does not match the quizzes. I read the reviews on RateMyProfessor and it seems just about everyone struggles with the same thing. Would withdrawing from the class be a good idea to protect my GPA? I would much rather have a W on my transcript than a C or D.
+
+POST TITLE: BIOL 1330 — anyone taken Dr. Kumar?
+POST BODY: Has anyone taken functional biology with Dr. Kumar? I'm a little scared after looking him up on RateMyProfessor. His reviews seem pretty negative — mostly about unclear grading and fast-paced lectures. Anyone have a more recent experience with him?
+
+POST TITLE: Who has had Dr. Samuel Obara for College Algebra?
+POST BODY: I have him for college algebra and checked RateMyProfessor before scheduling him and he had decent scores, but every single class feels almost like a waste of time. A majority of the time he pulls random questions from the homework and shows how to do them but does not actually teach the overall topic, so you go into the homework blind. He also has a thick accent which makes him hard to understand and it is too late to switch classes. Does anyone else have him and struggle this much?
+
+POST TITLE: Opinion on Peng Wuxu for CS 5310?
+POST BODY: I have learned not to put too much faith in RateMyProfessor since some students self-admittedly try to abuse the rating system. I am mainly asking for personal experiences. Please give details if possible about teaching style, grading, and workload.
+
+POST TITLE: Rate my professors — none of my teachers are listed
+POST BODY: The way none of my teachers are on RateMyProfessors — how do I know if they are good teachers or teachers I need to stay away from? Is there another resource for finding out about professors at TXST who don't have reviews yet?

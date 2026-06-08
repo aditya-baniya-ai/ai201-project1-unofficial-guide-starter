@@ -1,0 +1,76 @@
+============================================================
+CHUNK REPORT
+============================================================
+Total chunks    : 56
+Token min       : 35
+Token max       : 300
+Token mean      : 256.2
+
+Chunks by type:
+  generic              38
+  reddit_post          14
+  rmp_review           4
+
+Chunks by professor detected:
+  unknown                        46
+  Stefanie Ramirez               4
+  Ted Lehr                       3
+  Lehr                           3
+
+============================================================
+5 SAMPLE CHUNKS (for manual inspection)
+============================================================
+
+--- Sample 1 ---
+ID         : rmp_io_txst_chunk_9
+Type       : generic
+Professor  : not detected
+Token count: 300
+Source     : rmp_io_txst
+Text preview:
+School: Texas State University City: San Marcos State: Texas Department: Languages Helpful Score: 4.3 Easy Score: 2.9 Clarity Score: 4.3 Professor: Hayley Gillespie School: Texas State University City: San Marcos State: Texas Department: Biology Helpful Score: 1.3 Easy Score: 4.5 Clarity Score: 1.3 Professor: Hugo Antonio Pedrozo School: Texas State University City: San Marcos State: Texas Department: Biology Helpful Score: 2.9 Easy Score: 4.2 Clarity Score: 2.9 Professor: Vince Bagnulo School: 
+  [...truncated]
+
+--- Sample 2 ---
+ID         : professors_directory_txst_chunk_1
+Type       : generic
+Professor  : not detected
+Token count: 300
+Source     : professors_directory_txst
+Text preview:
+Dunn History 2 Rate D Griffin Communication 0 Rate D Holmes Freshman Year Experience 0 Rate Holly Wise Journalism 0 Rate Matthew Hood Finance 16 Rate Keri Fitzgerald Literature 6 Rate Joseph Etherton Psychology 0 Rate L Swol Management 0 Rate Cody Chumbley Philosophy 0 Rate Shane Smith Theater 1 Rate Thomas Clark Criminal Justice 0 Rate A. H. Batey Engineering 3 Rate Paul Mencke Education 28 Rate C J Neef Chemistry 0 Rate C A Pier Accounting 0 Rate K Seal Geography 3 Rate S W Theode Accounting 0
+  [...truncated]
+
+--- Sample 3 ---
+ID         : professors_directory_txst_chunk_4
+Type       : generic
+Professor  : not detected
+Token count: 300
+Source     : professors_directory_txst
+Text preview:
+Rate Jana Proff Communication Disorders 0 Rate Tondra Moore Health Information Science 0 Rate C. Lynne Fulmer Philosophy 0 Rate Teresa Zapp Curriculum Instruction 0 Rate Claudia Trevino University Seminar 0 Rate Natalie Myers Athletics 9 Rate Robert J.C. McLean Biology 1 Rate Shiva Rastogi Chemistry 23 Rate A Paz Criminal Justice 0 Rate A. Richard Anthropology 0 Rate A R Sullivan Political Science 0 Rate Cheri DeVol Theater 0 Rate Jeffrey Allison Chemistry 26 Rate Elizabeth Kanon Philosophy 7 Ra
+  [...truncated]
+
+--- Sample 4 ---
+ID         : reddit_txstate_search_rmp_post_3
+Type       : reddit_post
+Professor  : not detected
+Token count: 278
+Source     : reddit_txstate_search_rmp
+Text preview:
+POST TITLE: Class Withdrawal question — RMP reviews match my experience
+POST BODY: I am struggling in a class. I've found that the material given does not match the quizzes. I read the reviews on RateMyProfessor and it seems just about everyone struggles with the same thing. Would withdrawing from the class be a good idea to protect my GPA? I would much rather have a W on my transcript than a C or D.
+
+POST TITLE: BIOL 1330 — anyone taken Dr. Kumar?
+POST BODY: Has anyone taken functional biology 
+  [...truncated]
+
+--- Sample 5 ---
+ID         : uloop_txst_professors_chunk_3
+Type       : generic
+Professor  : not detected
+Token count: 300
+Source     : uloop_txst_professors
+Text preview:
+Z Mary Odum-Dixon Health & Physical Education Professor Ratings near Texas State UT Austin professor ratings Texas A&M professor ratings UH professor ratings Rice professor ratings St. Edward's professor ratings Texas Tech professor ratings UTHSCSA professor ratings UTHSC-H professor ratings UNT professor ratings Blinn College professor ratings UTEP professor ratings TWU professor ratings Texas State Professor Ratings Searching Texas State professor ratings has never been easier. Browse for teac
+  [...truncated]
