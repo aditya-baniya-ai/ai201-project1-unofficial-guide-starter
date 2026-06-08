@@ -1,10 +1,5 @@
 # The Unofficial Guide — Project 1
 
-> **How to use this template:**
-> Complete each section *after* you've built and tested the corresponding part of your system.
-> Do not write placeholder text — if a section isn't done yet, leave it blank and come back.
-> Every section below is required for submission. One-liners will not receive full credit.
-
 ---
 
 ## Domain
@@ -48,6 +43,55 @@ Before chunking, all documents were cleaned to remove HTML tags, navigation menu
 
 ---
 
+## Sample Chunks
+ 
+Five representative chunks drawn from the corpus:
+ 
+**Chunk 1**
+- **ID:** `reddit_txstate_search_rmp_post_1`
+- **Source:** `reddit_txstate_search_rmp`
+- **Professor detected:** none
+- **Tokens:** 235
+- **Text:**
+  > POST TITLE: Some advice — use HB 2504, not just RateMyProfessor
+  > POST BODY: So I'm sure most of us rely on RateMyProfessor when registering for classes. However, in many cases there are not enough reviews to be helpful. Go to the Texas State website and type in HB 2504. Not only will it show you the ratings given by students for course evaluations, but it also has the syllabus so you can check out what the class entails. Far more helpful than RMP alone.
+**Chunk 2**
+- **ID:** `professors_directory_txst_chunk_2`
+- **Source:** `professors_directory_txst`
+- **Professor detected:** none
+- **Tokens:** 300
+- **Text:**
+  > Biology 0 Rate Jessica Warren Health Physical Education 0 Rate Julia Sainz Spanish 5 Rate J Whalin Music 4 Rate T.J. Halatin Management 0 Rate M. Clay Green Biology 5 Rate April Buck Family & Consumer Science 0 Rate Judith Easton Psychology 28 Rate Beth Sanders Criminal Justice 0 Rate Erik Nielsen Art 0 Rate A C Ryder Art & Design 0 Rate Rocky Hobson Fine Arts 0 Rate John Payne Political Science 0
+**Chunk 3**
+- **ID:** `rmp_io_txst_chunk_14`
+- **Source:** `rmp_io_txst`
+- **Professor detected:** none
+- **Tokens:** 300
+- **Text:**
+  > Professor: Leslie Shroyer School: Texas State University City: San Marcos State: Texas Department: Mathematics Helpful Score: 3.5 Easy Score: 3.7 Clarity Score: 3.5 Professor: Leslie Shroyer School: Texas State University City: San Marcos Department: Mathematics Helpful Score: 2.5 Easy Score: 3.4 Clarity Score: 2.5 ...
+**Chunk 4**
+- **ID:** `rmp_professor_lehr_review_1` *(added manually — this chunk type is the primary signal source)*
+- **Source:** `rmp_professor_lehr`
+- **Professor detected:** Ted Lehr
+- **Tokens:** ~78
+- **Text:**
+  > PROFESSOR: Ted Lehr
+  > DEPARTMENT: Computer Science — Texas State University
+  >
+  > REVIEW: Lehr is strict about attendance and phones. He will literally stop his lecture and stare at you if you are on your phone. Homework every week, sometimes more. Grading is fair but he does not give extra credit. If you stay on top of the assignments you will be fine.
+**Chunk 5**
+- **ID:** `rmp_professor_mendez_basanta_review_0`
+- **Source:** `rmp_professor_mendez_basanta`
+- **Professor detected:** Francis Mendez
+- **Tokens:** ~72
+- **Text:**
+  > PROFESSOR: Francis Mendez
+  > DEPARTMENT: Biology — Texas State University
+  >
+  > REVIEW: Dr. Mendez is a tough grader. His exams are harder than the material you think you know. He does post study guides and practice questions on Canvas — use them. Does not curve individual exams but adjusts final grades slightly at the end.
+
+---
+
 ## Embedding Model
 
 **Model used:** `all-MiniLM-L6-v2` via `sentence-transformers`, running locally
@@ -55,7 +99,58 @@ Before chunking, all documents were cleaned to remove HTML tags, navigation menu
 This model was chosen for its latency advantage — it runs entirely on-device with no API calls, no rate limits, and no cost. It is also well-suited to short texts like student reviews, where its 256-token context window is rarely a limitation.
 
 **Production tradeoff reflection:**
-If deploying this for real TXST students where cost was not a constraint, two tradeoffs would be worth reconsidering. First, context length: `all-MiniLM-L6-v2` has a hard 256-token input limit, meaning longer Reddit posts may be silently truncated during embedding, which could cause the most informative part of a post to be lost. A model like OpenAI's `text-embedding-3-small` supports much longer inputs and would handle Reddit-style posts more reliably, at the cost of API latency and per-call pricing. Second, accuracy on domain-specific text: student slang such as "prof is lowkey goated" or "this class is an L" may not embed meaningfully with a general-purpose model, causing semantically relevant reviews to rank poorly against formal query language. A model fine-tuned on student review text would close that gap, but no such model is publicly available for this domain.
+If deploying this for real TXST students where cost was not a constraint, two tradeoffs would be worth reconsidering. First, context length: `all-MiniLM-L6-v2` has a hard 256-token input limit, meaning longer Reddit posts may be silently truncated during embedding, which could cause the most informative part of a post to be lost. A model like OpenAI's `text-embedding-3-small` supports much longer inputs and would handle Reddit-style posts more reliably, at the cost of API latency and per-call pricing. Second, accuracy on domain-specific text: student slang such as "prof is lowkey goated" or "this class is an L" may not embed meaningfully with a general-purpose model, causing semantically relevant reviews to rank poorly against formal query language. A model fine-tuned on student review text would close that gap, but no such 
+model is publicly available for this domain.
+
+---
+
+## Retrieval Test Results
+ 
+Three evaluation queries run against ChromaDB (top-k=3):
+ 
+**Query 1: "Is Dr. Lehr strict about phones in class?"**
+ 
+| Result | Distance | Source | Professor |
+|--------|----------|--------|-----------|
+| 1 | 0.3033 | rmp_professor_lehr | Ted Lehr |
+| 2 | 0.3437 | rmp_professor_lehr | Ted Lehr |
+| 3 | 0.5528 | rmp_professor_lehr | Ted Lehr |
+ 
+Top chunk preview:
+> "Lehr is strict about attendance and phones. He will literally stop his lecture and stare at you if you are on your phone."
+ 
+**Why these chunks are relevant:** All three results come from the correct source file and the correct professor. Results 1 and 2 both explicitly mention phone policy, with distances of 0.30 and 0.34 — well below the 0.5 threshold. The embedding model correctly matched "phones in class" to reviews that used the exact phrase "no phones allowed" and described the professor's reaction to phone use. Result 3 is slightly less relevant (distance 0.55) but still from the right professor and source.
+ 
+---
+ 
+**Query 2: "Is Dr. Francis Mendez grading easy to pass?"**
+ 
+| Result | Distance | Source | Professor |
+|--------|----------|--------|-----------|
+| 1 | 0.2103 | rmp_professor_mendez_basanta | Francis Mendez |
+| 2 | 0.2351 | rmp_professor_mendez_basanta | Francis Mendez |
+| 3 | 0.2579 | rmp_professor_mendez_basanta | Francis Mendez |
+ 
+Top chunk preview:
+> "Dr. Mendez is a tough grader. His exams are harder than the material you think you know."
+ 
+**Why these chunks are relevant:** All three results are from the correct professor with exceptionally low distances (0.21–0.26), indicating very strong semantic matches. Each chunk directly addresses grading difficulty — the exact topic of the query. The embedding successfully linked "easy to pass" in the query to phrases like "tough grader", "not easy to pass without effort", and "grading criteria are clearly laid out" in the reviews.
+ 
+---
+ 
+**Query 3: "Does Basanta give practice exam questions?"**
+ 
+| Result | Distance | Source | Professor |
+|--------|----------|--------|-----------|
+| 1 | 0.4003 | rmp_professor_mendez_basanta | Francis Mendez (metadata error) |
+| 2 | 0.4409 | rmp_professor_mendez_basanta | Francis Mendez (metadata error) |
+| 3 | 0.4504 | rmp_professor_mendez_basanta | Francis Mendez (metadata error) |
+ 
+Top chunk preview:
+> "Took Basanta for Calc II. He posts practice exam questions about a week before the real test and they are very similar to what shows up."
+ 
+The content is correct and relevant — distances are below 0.5 and all three chunks describe Basanta's practice exam behavior accurately. However, the professor metadata field incorrectly reads "Francis Mendez" because both professors were stored in the same source file. This is a known metadata bug described in the Failure Case section.
+ 
 ---
 
 ## Grounded Generation
@@ -72,6 +167,70 @@ Temperature is set to 0.2 to reduce creative generation and keep responses factu
 **How source attribution is surfaced in the response:**
 
 Source attribution is built **programmatically** from chunk metadata — it is not left to the LLM to add. After generation, the `format_sources()` function in `generate.py` deduplicates the retrieved chunks by source slug and professor name, and returns a list of human-readable labels. The Gradio interface displays these in a separate "Retrieved from" box beneath the answer, so they are always present regardless of what the LLM chose to say.
+
+---
+
+## Example Responses
+ 
+**Example 1 — grounded answer with source attribution:**
+ 
+> **Query:** Is Dr. Lehr angry if someone uses a phone in his class?
+>
+> **Answer:** According to the excerpts, Dr. Lehr will "literally stop his lecture and stare at you" if you are on your phone, which suggests he is strict about phone use, but it doesn't explicitly state that he gets angry.
+>
+> **Retrieved from:**
+> • rmp_professor_lehr (professor: Ted Lehr)
+ 
+---
+ 
+**Example 2 — grounded answer with source attribution:**
+ 
+> **Query:** Is Dr. Francis Mendez's grading criteria easy to pass?
+>
+> **Answer:** No, according to the reviews, Dr. Francis Mendez's grading criteria is not easy to pass. One review states "Would not say his class is easy to pass without effort" and another describes him as a "tough grader." However, students mention that using his posted resources such as practice questions can make his class doable.
+>
+> **Retrieved from:**
+> • rmp_professor_mendez_basanta (professor: Francis Mendez)
+ 
+---
+ 
+**Example 3 — out-of-scope query showing refusal response:**
+ 
+> **Query:** What is Dr. Lehr's office hours schedule?
+>
+> **Answer:** I don't have enough information in my sources to answer that.
+>
+> **Retrieved from:**
+> • rmp_professor_lehr (professor: Ted Lehr)
+ 
+The system correctly declined to answer even though it retrieved relevant Lehr chunks — because none of those chunks mentioned office hours, the grounding instruction prevented the model from inventing a schedule.
+ 
+---
+ 
+## Query Interface
+ 
+The system uses a Gradio web UI launched via `python app.py` and accessible at `http://localhost:7860`.
+ 
+**Input fields:**
+- **Your question** — a free-text box where the student types any question about a TXST professor
+**Output fields:**
+- **Answer** — the LLM's grounded response, drawn only from retrieved review chunks
+- **Retrieved from** — a programmatically generated list of source documents the answer was drawn from
+**Sample interaction transcript:**
+ 
+```
+User types: Does Dr. Lehr give a lot of assignments?
+ 
+Answer:
+Yes, according to the excerpts, Professor Ted Lehr gives a lot of programming
+assignments, with one review stating "He gives a lot of programming assignments
+throughout the semester, usually one every week or two" and another review
+mentioning "Homework every week, sometimes more."
+ 
+Retrieved from:
+• rmp_professor_lehr (professor: Ted Lehr)
+```
+ 
 ---
 
 ## Evaluation Report
